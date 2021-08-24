@@ -1,4 +1,10 @@
 language: go
+dist: bionic
 go:
  - 1.6
  - tip
+script:
+  - go mod init
+  - go mod tidy
+  - go mod vendor
+  - make
